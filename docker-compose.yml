@@ -1,0 +1,17 @@
+services:
+  discord-bot:
+    build: .
+    container_name: discord-bot
+    volumes:
+      - ./app:/app
+      - ./bot-prompts-private:/prompts
+      - ./bot-google-api/fluid-kiln-438701-p4-53fafbcff3b0.json:/app/fluid-kiln-438701-p4-53fafbcff3b0.json
+    environment:
+      - GOOGLE_APPLICATION_CREDENTIALS=/app/fluid-kiln-438701-p4-53fafbcff3b0.json
+    working_dir: /app
+    # command: python bot.py
+    # command: /bin/bash
+    env_file:
+      - .env
+    restart: unless-stopped
+    tty: true
