@@ -44,7 +44,7 @@ if __name__ == '__main__':
     #llama-3.2-11b-vision-preview
     #llama-3.1-70b-versatile
     llm = ChatGroq(
-        model="llama-3.1-70b-versatile",
+        model="llama-3.2-90b-text-preview",
         temperature=0.7,
     )
     Global_llm = llm
