@@ -9,6 +9,8 @@ OLLAMA_API_KEY=value
 OLLAMA_URL=https://target/ollama/api
 ```
 
+`googleconsoleのjson`を作成し、フォルダに入れる。
+
 起動する。
 
 ```bash
